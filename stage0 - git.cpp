@@ -1,6 +1,3 @@
-//Ryan Dusek - CS 4301 - Stage 0
-
-
 #include <stage0.h>
 #include <iostream>
 #include <fstream>
@@ -8,13 +5,10 @@
 #include <map>
 #include <ctime>
 #include <iomanip>
-#include <set>			//for creating sets of strings/keywords
-#include <bits/stdc++.h>//for all_of
-#include <cctype>		//isspace
+#include <set>
+#include <bits/stdc++.h>
+#include <cctype>
 
-
-
-//pascallite overall compiler structure stage 0 --> page 6 begins pseudocode
 
 
 //Constructor and Destructor (open/close files)
@@ -70,7 +64,7 @@ void Compiler::createListingHeader(){
     string currTime = ss.str();
 	
 	//top line
-	listingFile << "STAGE0:  Ryan Dusek & Ryan Duncan       " << currTime << endl << endl;
+	listingFile << "STAGE0:  Ryan Dusek & Ryan Duncan       " << currTime << endl << endl;//Myself and Group member
 	
 	//Line no. source...
 	listingFile << "LINE NO." << setw(30) << "SOURCE STATEMENT" << endl << endl;
