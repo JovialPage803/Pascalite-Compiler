@@ -1,6 +1,3 @@
-//Ryan Dusek - CS 4301 - Stage 1
-
-
 #include <stage1.h>
 #include <iostream>
 #include <fstream>
@@ -8,13 +5,9 @@
 #include <map>
 #include <ctime>
 #include <iomanip>
-#include <set>			//for creating sets of strings/keywords
-#include <bits/stdc++.h>//for all_of
-#include <cctype>		//isspace
-
-
-
-//pascallite overall compiler structure stage 0 --> page 6 begins pseudocode
+#include <set>
+#include <bits/stdc++.h>
+#include <cctype>
 
 
 //Constructor and Destructor (open/close files)
@@ -56,12 +49,12 @@ Compiler::~Compiler(){
 
 
 
-
-
 //.lst file
 void Compiler::createListingHeader(){
 	
-	/*string timeOut;
+	/*
+	//Taken out due to uncertainty of running in specific environments
+	string timeOut;
 	FILE* pipe = popen("./getTime", "r");
 	
 	char buffer[32];
@@ -80,7 +73,7 @@ void Compiler::createListingHeader(){
     string currTime = ss.str();
 	
 	//top line
-	listingFile << "STAGE1:  Ryan Dusek & Ryan Duncan       " << currTime << endl << endl;
+	listingFile << "STAGE1:  Ryan Dusek & Ryan Duncan       " << currTime << endl << endl;//Myself and Group Member
 	
 	//Line no. source...
 	listingFile << "LINE NO." << setw(30) << "SOURCE STATEMENT" << endl << endl;
@@ -878,13 +871,7 @@ string Compiler::genInternalName(storeTypes stype) const {
 
 
 
-
-
-
-
-
-
-//Stage 1
+//Stage 1 functions begin
 
 void Compiler::execStmts(){
 	
@@ -2116,9 +2103,6 @@ bool Compiler::isTemporary(string s) const{
 
 //Done:
 //added 6 keywords
-
-
-//To do
 //add 9 tokens :=, *, (, ), <>, <, <=, >=, >
 
 //revisions:
@@ -2144,5 +2128,3 @@ bool Compiler::isTemporary(string s) const{
 //operands of logical operators and or not must be boolean
 //relational operands < > <= >= must be integer
 //= <> may be BOTH integer or BOTH boolean (CANNOT mix)
-
-//OPERATOR PRECEDENCE PAGE 6
